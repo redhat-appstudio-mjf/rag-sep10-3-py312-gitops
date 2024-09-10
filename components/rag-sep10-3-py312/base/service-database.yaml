@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: rag-sep10-3-py312-database
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: rag-sep10-3-py312-database 
+  name: rag-sep10-3-py312-database
+spec:
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app.kubernetes.io/instance: rag-sep10-3-py312-database 
